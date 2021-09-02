@@ -2,9 +2,7 @@ import pytest
 from selenium import webdriver
 from PageObjects.LoginPage import LoginPage
 from utilities.readProperties import ReadConfig
-
-
-# For printing title of the page
+from utilities.customLogger import LogGen
 
 class Test_001_Login:
 
@@ -12,15 +10,19 @@ class Test_001_Login:
     username = ReadConfig.getUsername()
     password = ReadConfig.getPassword()
 
-    def test_homePageTitle(self, setup):
+    logger = LogGen.loggen()
 
+    def test_homePageTitle(self, setup):
+        self.logger.info("******Test_001******")
         self.driver = setup
         self.driver.get(self.baseURL)
+        self.logger.info("******Verifying Home Page Title******")
         act_title = self.driver.title
         self.driver.close()
         #For printing title of the page
         if act_title == "Log in to Jai Kisan":
             assert True
+            self.logger.info("******HomePage title test is passed******")
         else:
             assert False
 

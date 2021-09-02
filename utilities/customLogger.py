@@ -1,13 +1,11 @@
 import logging
 
-
-# For printing title of the page
-
+#It generates logs for the test cases
 class LogGen:
     @staticmethod
     def loggen():
-        logging.basicConfig(filename=".\\Logs\\automation.log",
+        logging.basicConfig(filename="D:\\User\\Rajeshwari\\EntityOnboarding\\Logs\\automation.log",
                             format='%(asctime)s: %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
-        logger=logging.getLogger()
+        logger = logging.getLogger()
         logger.setLevel(logging.INFO)
         return logger
