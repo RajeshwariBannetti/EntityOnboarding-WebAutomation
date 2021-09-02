@@ -16,6 +16,7 @@ class Test_001_Login:
         self.driver.get(self.baseURL)
         act_title = self.driver.title
         self.driver.close()
+        #For printing title of the page
         if act_title == "Log in to Jai Kisan":
             assert True
         else:
