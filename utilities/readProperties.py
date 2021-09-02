@@ -4,6 +4,9 @@ config = configparser.RawConfigParser()
 config.read(".\\Configurations\\config.ini")
 
 
+# For printing title of the page
+
+
 class ReadConfig:
 
     @staticmethod

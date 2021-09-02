@@ -4,6 +4,8 @@ from PageObjects.LoginPage import LoginPage
 from utilities.readProperties import ReadConfig
 
 
+# For printing title of the page
+
 class Test_001_Login:
 
     baseURL = ReadConfig.getApplicationURL()

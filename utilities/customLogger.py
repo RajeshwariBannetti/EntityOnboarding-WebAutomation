@@ -1,5 +1,8 @@
 import logging
 
+
+# For printing title of the page
+
 class LogGen:
     @staticmethod
     def loggen():
