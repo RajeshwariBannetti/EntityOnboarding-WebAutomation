@@ -1,0 +1,16 @@
+number witha highest occurence 
+frequency 
+palindrome
+linked list finding cycle in the link list 
+multiplication table 
+stack stacking
+tree and graph
+maps , sets ,ques.
+
+it config --global --unset-all user.name
+git config --global --unset-all user.email
+
+git config --global user.name "RajeshwariBannetti"
+
+git config --global user.name "FIRST_NAME LAST_NAME"
+git config --global user.email "MY_NAME@example.com"

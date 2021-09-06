@@ -16,6 +16,7 @@ class Test_001_Login:
         self.logger.info("******Test_001******")
         self.driver = setup
         self.driver.get(self.baseURL)
+        self.driver.maximize_window()
         self.logger.info("******Verifying Home Page Title******")
         act_title = self.driver.title
         self.driver.close()
