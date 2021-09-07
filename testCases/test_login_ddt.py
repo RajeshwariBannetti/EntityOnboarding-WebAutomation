@@ -1,5 +1,4 @@
-import pytest
-from PageObjects.LoginPage import LoginPage
+from pageObjects.LoginPage import LoginPage
 from utilities.readProperties import ReadConfig
 from utilities.customLogger import LogGen
 from utilities import XLUtils
@@ -31,6 +30,7 @@ class Test_002_DDT_Login:
             self.lp.setUserName(self.user)
             self.lp.setPassword(self.password)
             self.lp.clickLogin()
+            time.sleep(5)
 
             act_title = self.driver.title
             exp_title = "Log in to Jai Kisan"
@@ -38,7 +38,6 @@ class Test_002_DDT_Login:
             if act_title == exp_title:
                 if self.exp == 'Pass':
                     self.logger.info("**** passed ****")
-                    time.sleep(5)
                     self.lp.clickLogout();
                     lst_status.append("Pass")
                     self.driver.close()
