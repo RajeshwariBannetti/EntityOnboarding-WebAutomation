@@ -1,18 +1,21 @@
 import time
+
+from pageObjects.Documents import Documents
+from pageObjects.Entity import Entity
 from pageObjects.LoginPage import LoginPage
-from utilities import XLUtils
+from pageObjects.Promoters import Promoters
 from utilities.customLogger import LogGen
 from utilities.readProperties import ReadConfig
-from pageObjects.Filters import Filter
 
 
-class Test_003_Filter:
+class Test_004_New_entity:
     baseURL = ReadConfig.getApplicationURL()
     username = ReadConfig.getUsername()
     password = ReadConfig.getPassword()
+
     logger = LogGen.loggen()
 
-    def test_filter_login(self, setup):
+    def test_new_entity_login(self, setup):
         self.logger.info("************* Test_003_Filter **********")
         self.driver = setup
         self.driver.get(self.baseURL)
@@ -25,17 +28,19 @@ class Test_003_Filter:
         self.lp.clickLogin()
         time.sleep(5)
         self.logger.info("************* Login successful **********")
-        self.logger.info("******* Filter with firm type and date range **********")
-
-        self.filter = Filter(self.driver)
-        self.filter.clickOnFilterButton()
-        self.filter.firm()
-        self.filter.listfirm()
-        self.filter.DateRangeIp()
-        self.filter.DateRangeFrom("7/1/2021")
-        self.filter.DateRangeTo("8/1/2021")
         time.sleep(5)
-        self.filter.Savebutton()
-        time.sleep(10)
+        self.pg = Promoters(self.driver)
+        self.pg.clickonanyentity()
+        self.driver.refresh()
+        time.sleep(5)
+        self.dp = Documents(self.driver)
+        self.dp.clickdocumentstab()
+        self.dp.clicklink()
+        time.sleep(5)
+        # self.pg.clickPromoterguarantorstab()
+        # time.sleep(5)
+        # self.pg.clickaddnewpromoter()
+        # time.sleep(5)
+        # self.pg.setpromotername("rajeshwari B")
+        # self.pg.setpromoterfathername("A B")
         self.driver.close()
-

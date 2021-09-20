@@ -38,12 +38,12 @@ class Test_002_DDT_Login:
             if act_title == exp_title:
                 if self.exp == 'Pass':
                     self.logger.info("**** passed ****")
-                    self.lp.clickLogout();
+                    self.lp.clickLogout()
                     lst_status.append("Pass")
                     self.driver.close()
                 elif self.exp == 'Fail':
                     self.logger.info("**** failed ****")
-                    self.lp.clickLogout();
+                    self.lp.clickLogout()
                     lst_status.append("Fail")
                     self.driver.close()
             elif act_title != exp_title:

@@ -4,9 +4,6 @@ config = configparser.RawConfigParser()
 config.read(".\\Configurations\\config.ini")
 
 
-# For printing title of the page
-
-
 class ReadConfig:
 
     @staticmethod
@@ -18,8 +15,13 @@ class ReadConfig:
     def getUsername():
         username = config.get('common info', 'username')
         return username
-#password creds
+
     @staticmethod
     def getPassword():
         password = config.get('common info', 'password')
         return password
+
+    @staticmethod
+    def getpath():
+        path = config.get('common info', 'path')
+        return path

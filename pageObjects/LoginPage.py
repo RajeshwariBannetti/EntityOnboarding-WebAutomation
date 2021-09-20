@@ -23,3 +23,4 @@ class LoginPage:
 
     def clickLogout(self):
         self.driver.find_element_by_xpath(self.button_logout_xpath).click()
+

@@ -95,7 +95,7 @@ class Filter:
     def DateRangeFrom(self, fromDate):
         self.selectfrom = self.driver.find_element_by_xpath(self.DateRangeFrom_xpath).send_keys(fromDate)
 
-    def DateRangeTo(self,toDate):
+    def DateRangeTo(self, toDate):
         self.selectfrom = self.driver.find_element_by_xpath(self.DateRangeTo_xpath).send_keys(toDate)
 
     def Savebutton(self):

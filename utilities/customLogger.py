@@ -1,6 +1,7 @@
 import logging
 
-#It generates logs for the test cases
+
+# It generates logs for the test cases
 class LogGen:
     @staticmethod
     def loggen():
