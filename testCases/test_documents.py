@@ -35,6 +35,6 @@ class Test_documents:
         time.sleep(5)
         self.dp = Documents(self.driver)
         self.dp.clickdocumentstab()
-        self.dp.clicklink()
         time.sleep(5)
+        self.dp.clicklink()
         self.driver.close()

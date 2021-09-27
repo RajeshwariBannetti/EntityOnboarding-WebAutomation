@@ -36,6 +36,10 @@ class Test_003_Filter:
         self.filter.DateRangeTo("8/1/2021")
         time.sleep(5)
         self.filter.Savebutton()
+        print()
         time.sleep(10)
+        self.filter.Searchresult()
+        row_count = self.filter.getNoOfRows()
+        print(row_count)
         self.driver.close()
 

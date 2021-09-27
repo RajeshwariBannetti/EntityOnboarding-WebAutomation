@@ -1,5 +1,5 @@
 class Promoters:
-    clickon_entitytoedit_xpath = "//tbody/tr[4]/td[3]"
+    clickon_entitytoedit_xpath = "//tbody/tr[2]/td[3]"
     tab_PromotersandGuarantors_xpath = "//div[@id='mat-tab-label-0-1']"
     button_NewPromoter_xpath = "//mat-tab-body/div[1]/div[1]/anchors-section-renderer[1]/div[" \
                                "1]/anchors-content-decider[1]/anchors-member-details[1]/div[1]/anchors-table[1]/div[" \

@@ -17,7 +17,7 @@ def id_generator(size=15, chars=string.ascii_uppercase + string.digits):
 
 
 class Test_004_New_entity:
-    baseURL = ReadConfig.getApplicationURL()    
+    baseURL = ReadConfig.getApplicationURL()
     username = ReadConfig.getUsername()
     password = ReadConfig.getPassword()
 
@@ -117,5 +117,4 @@ class Test_004_New_entity:
         time.sleep(5)
         self.pg.setpromotername("rajeshwari B")
         self.pg.setpromoterfathername("A B")
-
         self.driver.close()
