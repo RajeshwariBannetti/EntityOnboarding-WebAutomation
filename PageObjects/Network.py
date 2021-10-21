@@ -17,27 +17,29 @@ class Network:
                             "1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[1]/div[1]/form[" \
                             "1]/jkf-element-builder[3]/anchors-wrapper-element[1]/anchors-select-input[1]/div[" \
                             "1]/mat-form-field[1]/div[1]/div[1]/div[3]/mat-select[1]/div[1]/div[1]/span[1] "
-    list_Status_xpath = "//span[contains(text(),'Active')]"
+    list_Status_xpath = "//body/div[2]/div[4]/div[1]/div[1]/div[1]/mat-option[1]/span[1]"
     button_submitnetwork_xpath = "//body/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[1]/section[" \
                                  "1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[1]/div[1]/div[" \
                                  "1]/button[1] "
-    button_Addnewstore_xpath = "//mat-tab-body/div[1]/div[1]/anchors-section-renderer[1]/div[" \
-                               "1]/anchors-content-decider[2]/anchors-member-details[1]/div[1]/anchors-table[1]/div[" \
-                               "1]/div[2]/div[3]/button[2] "
-    textbox_storename_xpath = "//input[@id='mat-input-2']"
-    dropdown_storeType_xpath = "//body/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[1]/section[" \
-                               "1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[1]/div[1]/form[" \
-                               "1]/jkf-element-builder[2]/anchors-wrapper-element[1]/anchors-select-input[1]/div[" \
-                               "1]/mat-form-field[1]/div[1]/div[1]/div[3]/mat-select[1]/div[1]/div[1]/span[1] "
-    list_storetype_xpath = "//body/div[2]/div[4]/div[1]/div[1]/div[1]/mat-option[2]/span[1]"
-    dropdownstorestatus_xpath = "//body/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[1]/section[" \
-                                "1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[1]/div[1]/form[" \
-                                "1]/jkf-element-builder[3]/anchors-wrapper-element[1]/anchors-select-input[1]/div[" \
-                                "1]/mat-form-field[1]/div[1]/div[1]/div[3] "
+    button_Addnewstore_xpath = "//span[contains(text(),'Add New Store')]"
+    textbox_storename_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[" \
+                              "1]/section[1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[1]/div[" \
+                              "1]/form[1]/jkf-element-builder[1]/anchors-wrapper-element[1]/anchors-text-input[" \
+                              "1]/div[1]/mat-form-field[1]/div[1]/div[1]/div[3]/input[1] "
+    dropdown_storeType_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[" \
+                               "1]/section[1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[1]/div[" \
+                               "1]/form[1]/jkf-element-builder[2]/anchors-wrapper-element[1]/anchors-select-input[" \
+                               "1]/div[1]/mat-form-field[1]/div[1]/div[1]/div[3]/mat-select[1]/div[1]/div[1]/span[1] "
+    list_storetype_xpath = "/html[1]/body[1]/div[2]/div[4]/div[1]/div[1]/div[1]/mat-option[1]/span[1]"
+    dropdownstorestatus_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[" \
+                                "1]/section[1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[" \
+                                "1]/div[1]/form[1]/jkf-element-builder[3]/anchors-wrapper-element[" \
+                                "1]/anchors-select-input[1]/div[1]/mat-form-field[1]/div[1]/div[1]/div[3]/mat-select[" \
+                                "1]/div[1]/div[1]/span[1] "
     list_storestatus_xpath = "//span[contains(text(),'Active')]"
-    button_submitStore_xpath = "//body/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[1]/section[" \
-                               "1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[1]/div[1]/div[" \
-                               "1]/button[1] "
+    button_submitStore_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[" \
+                               "1]/section[1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[1]/div[" \
+                               "1]/div[1]/button[1] "
     link_ToEditStorename_xpath = "//body[1]/anchors-root[1]/anchors-anchors-container[1]/anchors-application-details[" \
                                  "1]/div[1]/div[3]/div[1]/mat-tab-group[1]/div[1]/mat-tab-body[5]/div[1]/div[" \
                                  "1]/anchors-section-renderer[1]/div[1]/anchors-content-decider[" \
@@ -111,10 +113,10 @@ class Network:
     def selectstoretype(self):
         self.driver.find_element_by_xpath(self.list_storetype_xpath).click()
 
-    def selectstorestatus(self):
+    def clickstorestatus(self):
         self.driver.find_element_by_xpath(self.dropdownstorestatus_xpath).click()
 
-    def clickStorestatus(self):
+    def selectStorestatus(self):
         self.driver.find_element_by_xpath(self.list_storestatus_xpath).click()
 
     def clicksubmitStore(self):
@@ -161,6 +163,3 @@ class Network:
 
     def UpdateCurrentdadd(self):
         self.driver.find_element_by_xpath(self.button_UpdateCurrentadd_xpath).click()
-
-    # def(self):
-    #     self.driver.find_element_by_xpath()

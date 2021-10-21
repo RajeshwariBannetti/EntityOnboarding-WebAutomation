@@ -1,10 +1,13 @@
 import random
 import string
 import time
+
+import pytest
+
 from pageObjects.LoginPage import LoginPage
 from pageObjects.Promoters import Promoters
 from pageObjects.SPOC import SPOC
-from testCases.test_new_entity import random_generator
+from testCases.test_A_new_entity import random_generator
 from utilities.readProperties import ReadConfig
 from utilities.customLogger import LogGen
 
@@ -24,8 +27,10 @@ class Test_documents:
     path = ".//TestData/Bank statement.pdf"
     logger = LogGen.loggen()
 
+    @pytest.mark.regression
+    @pytest.mark.sanity
     def test_new_entity_login(self, setup):
-        self.logger.info("************* Test_003_Filter **********")
+        self.logger.info("************* Test_documents **********")
         self.driver = setup
         self.driver.get(self.baseURL)
         self.driver.maximize_window()
@@ -42,6 +47,7 @@ class Test_documents:
         self.pg.clickonanyentity()
         self.driver.refresh()
         time.sleep(5)
+        self.logger.info("************* Creating New Spoc **********")
         self.sp = SPOC(self.driver)
         self.sp.clickspoctab()
         time.sleep(5)

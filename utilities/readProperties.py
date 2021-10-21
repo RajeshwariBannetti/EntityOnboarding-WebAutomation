@@ -8,7 +8,7 @@ class ReadConfig:
 
     @staticmethod
     def getApplicationURL():
-        url = config.get('common info', 'baseURL')
+        url = config.get('common info', 'baseURLDev')
         return url
 
     @staticmethod

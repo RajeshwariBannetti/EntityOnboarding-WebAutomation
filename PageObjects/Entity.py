@@ -28,7 +28,7 @@ class Entity:
                                   "1]/anchors-wrapper-element[1]/anchors-select-input[1]/div[1]/mat-form-field[" \
                                   "1]/div[1]/div[" \
                                   "1]/div[3] "
-    list_firmtype_xpath = "//*[contains(text(),'Public Limited Company')]"
+    list_firmtype_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/mat-option[1]/span[1]"
     dropdownlist_Entitytype_xpath = "//mat-tab-body/div[1]/div[1]/anchors-section-renderer[1]/div[" \
                                     "1]/anchors-content-decider[1]/anchors-forms[1]/anchors-form-builder[1]/div[" \
                                     "1]/form[1]/jkf-element-builder[2]/anchors-wrapper-element[" \
@@ -42,24 +42,51 @@ class Entity:
     button_submitbasicinfo_xpath = "//span[contains(text(),'Submit')]"
 
     # Additional details =ad
-    button_additionaldetails_xpath = "//mat-tab-body/div[1]/div[1]/anchors-section-renderer[1]/div[" \
+    button_additionaldetails_xpath = "/html[1]/body[1]/anchors-root[1]/anchors-anchors-container[" \
+                                     "1]/anchors-application-details[1]/div[1]/div[3]/div[1]/mat-tab-group[1]/div[" \
+                                     "1]/mat-tab-body[1]/div[1]/div[1]/anchors-section-renderer[1]/div[" \
                                      "1]/anchors-content-decider[2]/anchors-forms[1]/anchors-form-builder[1]/div[" \
                                      "1]/div[1]/button[1] "
     dropdownlist_Operatingmode_xpath = "//mat-tab-body/div[1]/div[1]/anchors-section-renderer[1]/div[" \
                                        "1]/anchors-content-decider[2]/anchors-forms[1]/anchors-form-builder[1]/div[" \
                                        "1]/form[1]/jkf-element-builder[1]/anchors-wrapper-element[" \
                                        "1]/anchors-select-input[1]/div[1]/mat-form-field[1]/div[1]/div[1]/div[3] "
-    list_operatingmode_xpath = "//span[contains(text(),'Network')]"
-    textbox_averagebankbalance_xpath = "//input[@id='mat-input-0']"
-    textbox_montlyincome_xpath = "//input[@id='mat-input-1']"
-    textbox_annualincome_xpath = "//input[@id='mat-input-2']"
-    button_submitadditianlinfo_xpath = "//span[contains(text(),'Submit')]"
+    list_operatingmode_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/div[1]/mat-option[2]/span[1]"
+    textbox_averagebankbalance_xpath = "/html[1]/body[1]/anchors-root[1]/anchors-anchors-container[" \
+                                       "1]/anchors-application-details[1]/div[1]/div[3]/div[1]/mat-tab-group[1]/div[" \
+                                       "1]/mat-tab-body[1]/div[1]/div[1]/anchors-section-renderer[1]/div[" \
+                                       "1]/anchors-content-decider[2]/anchors-forms[1]/anchors-form-builder[1]/div[" \
+                                       "1]/form[1]/jkf-element-builder[2]/anchors-wrapper-element[" \
+                                       "1]/anchors-number-input[1]/div[1]/mat-form-field[1]/div[1]/div[1]/div[" \
+                                       "3]/input[1] "
+    textbox_montlyincome_xpath = "/html[1]/body[1]/anchors-root[1]/anchors-anchors-container[" \
+                                 "1]/anchors-application-details[1]/div[1]/div[3]/div[1]/mat-tab-group[1]/div[" \
+                                 "1]/mat-tab-body[1]/div[1]/div[1]/anchors-section-renderer[1]/div[" \
+                                 "1]/anchors-content-decider[2]/anchors-forms[1]/anchors-form-builder[1]/div[1]/form[" \
+                                 "1]/jkf-element-builder[3]/anchors-wrapper-element[1]/anchors-number-input[1]/div[" \
+                                 "1]/mat-form-field[1]/div[1]/div[1]/div[3]/input[1] "
+    textbox_annualincome_xpath = "/html[1]/body[1]/anchors-root[1]/anchors-anchors-container[" \
+                                 "1]/anchors-application-details[1]/div[1]/div[3]/div[1]/mat-tab-group[1]/div[" \
+                                 "1]/mat-tab-body[1]/div[1]/div[1]/anchors-section-renderer[1]/div[" \
+                                 "1]/anchors-content-decider[2]/anchors-forms[1]/anchors-form-builder[1]/div[1]/form[" \
+                                 "1]/jkf-element-builder[4]/anchors-wrapper-element[1]/anchors-number-input[1]/div[" \
+                                 "1]/mat-form-field[1]/div[1]/div[1]/div[3]/input[1] "
+    button_submitadditianlinfo_xpath = "/html[1]/body[1]/anchors-root[1]/anchors-anchors-container[" \
+                                       "1]/anchors-application-details[1]/div[1]/div[3]/div[1]/mat-tab-group[1]/div[" \
+                                       "1]/mat-tab-body[1]/div[1]/div[1]/anchors-section-renderer[1]/div[" \
+                                       "1]/anchors-content-decider[2]/anchors-forms[1]/anchors-form-builder[1]/div[" \
+                                       "1]/div[1]/button[1]/span[1] "
 
     # Registered Address
     button_edit_registeredaddress_xpath = "//mat-tab-body/div[1]/div[1]/anchors-section-renderer[1]/div[" \
                                           "1]/anchors-content-decider[3]/anchors-forms[1]/anchors-form-builder[" \
                                           "1]/div[1]/div[1]/button[1]/span[1] "
-    textbox_pincode_xpath = "//input[@id='mat-input-0']"
+    textbox_pincode_xpath = "/html[1]/body[1]/anchors-root[1]/anchors-anchors-container[" \
+                            "1]/anchors-application-details[1]/div[1]/div[3]/div[1]/mat-tab-group[1]/div[" \
+                            "1]/mat-tab-body[1]/div[1]/div[1]/anchors-section-renderer[1]/div[" \
+                            "1]/anchors-content-decider[3]/anchors-forms[1]/anchors-form-builder[1]/div[1]/form[" \
+                            "1]/jkf-element-builder[1]/anchors-wrapper-element[1]/anchors-number-input[1]/div[" \
+                            "1]/mat-form-field[1]/div[1]/div[1]/div[4]/input[1] "
     button_pincode_xpath = "//span[contains(text(),'OK')]"
     # textbox_ra_EnterState_xpath = "//input[@id='mat-input-15']"
     # textbox_ra_EnterDistrict_xpath = "//input[@id='mat-input-16']"
@@ -68,10 +95,7 @@ class Entity:
     textbox_Landmark_id = "mat-input-6"
     textbox_streetaddress1_id = "mat-input-7"
     textbox_streetaddress2_id = "mat-input-8"
-    dropdownlist_Addresstype_xpath = "//mat-tab-body/div[1]/div[1]/anchors-section-renderer[1]/div[" \
-                                     "1]/anchors-content-decider[3]/anchors-forms[1]/anchors-form-builder[1]/div[" \
-                                     "1]/form[1]/jkf-element-builder[9]/anchors-wrapper-element[" \
-                                     "1]/anchors-select-input[1]/div[1]/mat-form-field[1]/div[1]/div[1]/div[3] "
+    dropdownlist_Addresstype_xpath = "//div[@id='mat-select-value-5']"
     list_addresstype_owned_xpath = "//span[contains(text(),'Owned')]"
     list_addresstype_rented_xpath = "//span[contains(text(),'Rented')]"
     # textbox_latitude_xpath = "//input[@id='mat-input-22']"
@@ -81,39 +105,62 @@ class Entity:
                                        "1]/div[1]/button[1] "
 
     #  Add Bank Account
-    button_AddBankAccount_xpath = "//span[contains(text(),'Add Bank Account')]"
+    button_AddBankAccount_xpath = "/html[1]/body[1]/anchors-root[1]/anchors-anchors-container[" \
+                                  "1]/anchors-application-details[1]/div[1]/div[3]/div[1]/mat-tab-group[1]/div[" \
+                                  "1]/mat-tab-body[1]/div[1]/div[1]/anchors-section-renderer[1]/div[" \
+                                  "1]/anchors-content-decider[4]/anchors-member-details[1]/div[1]/anchors-table[" \
+                                  "1]/div[1]/div[2]/div[2]/button[2]/span[1] "
 
     # Account information = ai
-    textbox_ai_accountnumber_xpath = "//input[@id='mat-input-24']"
-    textbox_ai_confirmaccountnumber_xpath = "//input[@id='mat-input-25']"
-    textbox_ai_accountholdername_xpath = "//input[@id='mat-input-26']"
-    textbox_ai_IFSCcode_xpath = "//input[@id='mat-input-27']"
+    textbox_ai_accountnumber_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[" \
+                                     "1]/section[1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[" \
+                                     "1]/div[1]/form[1]/jkf-element-builder[1]/anchors-wrapper-element[" \
+                                     "1]/anchors-text-input[1]/div[1]/mat-form-field[1]/div[1]/div[1]/div[3]/input[1] "
+    textbox_ai_confirmaccountnumber_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[" \
+                                            "1]/anchors-member[1]/section[1]/anchors-member-section[1]/anchors-forms[" \
+                                            "1]/anchors-form-builder[1]/div[1]/form[1]/jkf-element-builder[" \
+                                            "2]/anchors-wrapper-element[1]/anchors-text-input[1]/div[" \
+                                            "1]/mat-form-field[1]/div[1]/div[1]/div[3]/input[1] "
+    textbox_ai_accountholdername_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[" \
+                                         "1]/anchors-member[1]/section[1]/anchors-member-section[1]/anchors-forms[" \
+                                         "1]/anchors-form-builder[1]/div[1]/form[1]/jkf-element-builder[" \
+                                         "3]/anchors-wrapper-element[1]/anchors-text-input[1]/div[1]/mat-form-field[" \
+                                         "1]/div[1]/div[1]/div[3]/input[1] "
+    textbox_ai_IFSCcode_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[" \
+                                "1]/section[1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[" \
+                                "1]/div[1]/form[1]/jkf-element-builder[4]/anchors-wrapper-element[" \
+                                "1]/anchors-text-input[1]/div[1]/mat-form-field[1]/div[1]/div[1]/div[3]/input[1] "
     textbox_ai_EnterMICRCODE_xpath = "//input[@id='mat-input-28']"
     textbox_ai_bankname_xpath = "//input[@id='mat-input-29']"
     textbox_ai_bankaddress_xpath = "//input[@id='mat-input-30']"
-    dropdownlist_accounttype_xpath = "//body/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[1]/section[" \
-                                     "1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[1]/div[" \
-                                     "1]/form[" \
-                                     "1]/jkf-element-builder[8]/anchors-wrapper-element[1]/anchors-select-input[1]/div[" \
-                                     "1]/mat-form-field[1]/div[1]/div[1]/div[3]/mat-select[1]/div[1]/div[1]/span[1] "
-    list_ai_accounttype_Current_xpath = "//span[contains(text(),'Current')]"
+    dropdownlist_accounttype_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[" \
+                                     "1]/section[1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[" \
+                                     "1]/div[1]/form[1]/jkf-element-builder[8]/anchors-wrapper-element[" \
+                                     "1]/anchors-select-input[1]/div[1]/mat-form-field[1]/div[1]/div[1]/div[3] "
+    list_ai_accounttype_Current_xpath = "/html[1]/body[1]/div[2]/div[4]/div[1]/div[1]/div[1]/mat-option[1]/span[1]"
     list_ra_accounttype_Saving_xpath = "//span[contains(text(),'Saving')]"
-    textbox_ai_mobilenumber_xpath = "//input[@id='mat-input-31']"
-    dropdownlist_ai_Is_Primary_Promoter_xpath = "//body/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[" \
-                                                "1]/section[1]/anchors-member-section[1]/anchors-forms[" \
-                                                "1]/anchors-form-builder[1]/div[1]/form[1]/jkf-element-builder[" \
-                                                "10]/anchors-wrapper-element[1]/anchors-select-input[1]/div[" \
-                                                "1]/mat-form-field[" \
-                                                "1]/div[1]/div[1]/div[3]/mat-select[1]/div[1]/div[1]/span[1]"
-    list_ai_Is_Primary_Promoter_Yes_xpath = "//span[contains(text(),'Yes')]"
-    list_ra_Is_Primary_Promoter_No_xpath = "//span[contains(text(),'No')]"
+    textbox_ai_mobilenumber_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[" \
+                                    "1]/section[1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[" \
+                                    "1]/div[1]/form[1]/jkf-element-builder[9]/anchors-wrapper-element[" \
+                                    "1]/anchors-number-input[1]/div[1]/mat-form-field[1]/div[1]/div[1]/div[3]/input[1] "
+    dropdownlist_ai_Is_Primary_Promoter_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[" \
+                                                "1]/anchors-member[1]/section[1]/anchors-member-section[" \
+                                                "1]/anchors-forms[1]/anchors-form-builder[1]/div[1]/form[" \
+                                                "1]/jkf-element-builder[10]/anchors-wrapper-element[" \
+                                                "1]/anchors-select-input[1]/div[1]/mat-form-field[1]/div[1]/div[" \
+                                                "1]/div[3]/mat-select[1]/div[1]/div[1]/span[1] "
+    list_ai_Is_Primary_Promoter_Yes_xpath = "/html[1]/body[1]/div[2]/div[4]/div[1]/div[1]/div[1]/mat-option[1]/span[1]"
+    list_ra_Is_Primary_Promoter_No_xpath = "//span[contains(text(),'Yes')]"
 
-    dropdownlist_ai_status_xpath = "//body/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[1]/section[" \
-                                   "1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[1]/div[1]/form[" \
-                                   "1]/jkf-element-builder[11]/anchors-wrapper-element[1]/anchors-select-input[1]/div[" \
-                                   "1]/mat-form-field[1]/div[1]/div[1]/div[3]/mat-select[1]/div[1]/div[1]/span[1] "
+    dropdownlist_ai_status_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[" \
+                                   "1]/section[1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[" \
+                                   "1]/div[1]/form[1]/jkf-element-builder[11]/anchors-wrapper-element[" \
+                                   "1]/anchors-select-input[1]/div[1]/mat-form-field[1]/div[1]/div[1]/div[3] "
     list_ai_status_Active_xpath = "//span[contains(text(),'Active')]"
     list_ai_status_Inactive_xpath = "//span[contains(text(),'Inactive')]"
+    button_submitBankdetails_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[" \
+                                     "1]/section[1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[" \
+                                     "1]/div[1]/div[1]/button[1]/span[1] "
 
     # Bank statements = bs:
     button_UploadStatement_Bankstatemet_xpath = "//span[contains(text(),'Upload Statement')]"
@@ -283,9 +330,16 @@ class Entity:
         self.driver.find_element_by_xpath(self.dropdownlist_ai_Is_Primary_Promoter_xpath).click()
 
     def selectISParimaryPromotor(self):
+        self.driver.find_element_by_xpath(self.list_ra_Is_Primary_Promoter_No_xpath).click()
+
+    def clickStatus(self):
+        self.driver.find_element_by_xpath(self.dropdownlist_ai_status_xpath).click()
+
+    def selectStatus(self):
         self.driver.find_element_by_xpath(self.list_ai_status_Active_xpath).click()
 
-    def clcikuploadbankstatement(self):
-        self.driver.find_element_by_xpath(self.button_UploadStatement_Bankstatemet_xpath).click()
+    def clicksubmit(self):
+        self.driver.find_element_by_xpath(self.button_submitBankdetails_xpath).click()
 
-
+    # def clcikuploadbankstatement(self):
+    #     self.driver.find_element_by_xpath(self.button_UploadStatement_Bankstatemet_xpath).click()

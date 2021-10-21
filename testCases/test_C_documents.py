@@ -1,24 +1,30 @@
-import time
+import pytest
 
 from pageObjects.Documents import Documents
-from pageObjects.Entity import Entity
 from pageObjects.LoginPage import LoginPage
 from pageObjects.Promoters import Promoters
-from utilities.customLogger import LogGen
 from utilities.readProperties import ReadConfig
+from utilities.customLogger import LogGen
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions
+from utilities import XLUtils
+import time
 
 
-class Test_004_New_entity:
-    baseURL = ReadConfig.getApplicationURL()
+class Test_documents:
+    baseURLDev = ReadConfig.getApplicationURL()
     username = ReadConfig.getUsername()
     password = ReadConfig.getPassword()
-
+    path = ".//TestData/Bank statement.pdf"
     logger = LogGen.loggen()
 
+    # @pytest.mark.regression
+    # @pytest.mark.sanity
+    # @pytest.mark.skip
     def test_new_entity_login(self, setup):
         self.logger.info("************* Test_003_Filter **********")
         self.driver = setup
-        self.driver.get(self.baseURL)
+        self.driver.get(self.baseURLDev)
         self.driver.maximize_window()
         time.sleep(5)
         self.lp = LoginPage(self.driver)
@@ -35,12 +41,9 @@ class Test_004_New_entity:
         time.sleep(5)
         self.dp = Documents(self.driver)
         self.dp.clickdocumentstab()
-        self.dp.clicklink()
         time.sleep(5)
-        # self.pg.clickPromoterguarantorstab()
-        # time.sleep(5)
-        # self.pg.clickaddnewpromoter()
-        # time.sleep(5)
-        # self.pg.setpromotername("rajeshwari B")
-        # self.pg.setpromoterfathername("A B")
+        self.dp.clickgstdoc("D://User/Rajeshwari/EntityOnboarding/TestData/sample.pdf")
+        time.sleep(5)
+        self.dp.uploadgst()
+        time.sleep(3)
         self.driver.close()
