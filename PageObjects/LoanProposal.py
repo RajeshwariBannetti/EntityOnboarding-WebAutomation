@@ -17,28 +17,29 @@ class LoanProposal:
                             "1]/jkf-element-builder[2]/anchors-wrapper-element[1]/anchors-select-input[1]/div[" \
                             "1]/mat-form-field[1]/div[1]/div[1]/div[3] "
     list_Lender_xpath = "//span[contains(text(),'Care India finvest')]"
-    textbox_ROI_xpath = "//input[@id='mat-input-0']"
-    textbox_LoanAmount_xpath = "//input[@id='mat-input-1']"
-    textbox_LTV_xpath = "//input[@id='mat-input-2']"
-    textbox_Tenure_xpath = "//input[@id='mat-input-3']"
-    dropdown_TenureUnit_xpath = "//body/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[1]/section[" \
-                                "1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[1]/div[1]/form[" \
-                                "1]/jkf-element-builder[7]/anchors-wrapper-element[1]/anchors-select-input[1]/div[" \
-                                "1]/mat-form-field[1]/div[1]/div[1]/div[3]/mat-select[1]/div[1]/div[1]/span[1] "
+    textbox_ROI_xpath = "//input[@id='en-sec-product-details-roi']"
+    textbox_LoanAmount_xpath = "//input[@id='en-sec-product-details-loanAmount']"
+    textbox_LTV_xpath = "//input[@id='en-sec-product-details-ltv']"
+    textbox_Tenure_xpath = "//input[@id='en-sec-product-details-tenure']"
+    dropdown_TenureUnit_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[" \
+                                "1]/section[1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[" \
+                                "1]/div[1]/form[1]/jkf-element-builder[7]/anchors-wrapper-element[" \
+                                "1]/anchors-select-input[1]/div[1]/mat-form-field[1]/div[1]/div[1]/div[3]/mat-select[" \
+                                "1]/div[1]/div[1]/span[1] "
     list_TenureUnit_xpath = "//span[contains(text(),'Months')]"
-    textbox_ProposedLoan_Amount = "//input[@id='mat-input-4']"
-    textbox_ProposedCommercialOffered_xpath = "//input[@id='mat-input-5']"
-    dropdown_RepaymentType_xpath = "//body/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[1]/section[" \
-                                   "1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[1]/div[" \
-                                   "1]/form[1]/jkf-element-builder[10]/anchors-wrapper-element[" \
+    textbox_ProposedLoan_Amount = "//input[@id='en-sec-product-details-proposedLoanAmount']"
+    textbox_ProposedCommercialOffered_xpath = "//input[@id='en-sec-product-details-proposedCommercialOffered']"
+    dropdown_RepaymentType_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[" \
+                                   "1]/section[1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[" \
+                                   "1]/div[1]/form[1]/jkf-element-builder[10]/anchors-wrapper-element[" \
                                    "1]/anchors-select-input[1]/div[1]/mat-form-field[1]/div[1]/div[1]/div[" \
                                    "3]/mat-select[1]/div[1]/div[1]/span[1] "
-    list_RepaymentType_xpath = "//span[contains(text(),'STANDARD')]"
-    dropdown_Category_xpath = "//body/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[1]/section[" \
-                              "1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[1]/div[1]/form[" \
-                              "1]/jkf-element-builder[11]/anchors-wrapper-element[1]/anchors-select-input[1]/div[" \
-                              "1]/mat-form-field[1]/div[1]/div[1]/div[3]/mat-select[1]/div[1]/div[1]/span[1] "
-    list_Category_xpath = "//span[contains(text(),'Institution')]"
+    list_RepaymentType_xpath = "//span[contains(text(),'STRUCTURED')]"
+    dropdown_Category_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[" \
+                              "1]/section[1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[1]/div[" \
+                              "1]/form[1]/jkf-element-builder[11]/anchors-wrapper-element[1]/anchors-select-input[" \
+                              "1]/div[1]/mat-form-field[1]/div[1]/div[1]/div[3] "
+    list_Category_xpath = "//span[@class='mat-option-text'][normalize-space()='Vendor']"
     dropdown_AgreementType_xpath = "//body/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[1]/section[" \
                                    "1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[1]/div[" \
                                    "1]/form[1]/jkf-element-builder[12]/anchors-wrapper-element[" \
@@ -50,8 +51,8 @@ class LoanProposal:
                                     "1]/form[1]/jkf-element-builder[13]/anchors-wrapper-element[" \
                                     "1]/anchors-select-input[1]/div[1]/mat-form-field[1]/div[1]/div[1]/div[3] "
     list_CommissionType_xpath = "//span[contains(text(),'Percentage')]"
-    textbox_GlobalMargin_xpath = "//input[@id='mat-input-6']"
-    textbox_PurposeOfLoan = "//textarea[@id='mat-input-7']"
+    textbox_GlobalMargin_xpath = "//input[@id='en-sec-product-details-globalMargin']"
+    textbox_PurposeOfLoan = "//textarea[@id='en-sec-product-details-purposeOfLoan']"
     button_SubmitLoanProposal_xpath = "//body/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[1]/section[" \
                                       "1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[1]/div[" \
                                       "1]/div[1]/button[1] "
@@ -67,7 +68,7 @@ class LoanProposal:
                                   "1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[1]/div[1]/form[" \
                                   "1]/jkf-element-builder[3]/anchors-wrapper-element[1]/anchors-select-input[1]/div[" \
                                   "1]/mat-form-field[1]/div[1]/div[1]/div[3] "
-    list_ProductBrand_xpath = "//body/div[2]/div[6]/div[1]/div[1]/div[1]/mat-option[2]/span[1]"
+    list_ProductBrand_xpath = "/html[1]/body[1]/div[2]/div[6]/div[1]/div[1]/div[1]/mat-option[1]/span[1]"
 
     # Tenure Based Margin
     dropdown_Operator_xpath = "//body/div[2]/div[4]/div[1]/mat-dialog-container[1]/anchors-member[1]/section[" \
@@ -76,8 +77,8 @@ class LoanProposal:
                               "1]/jkf-array-element[1]/div[2]/div[1]/div[1]/jkf-element-builder[" \
                               "1]/anchors-wrapper-element[1]/anchors-select-input[1]/div[1]/mat-form-field[1]/div[" \
                               "1]/div[1]/div[3] "
-    list_Operator_xpath = "//body/div[2]/div[6]/div[1]/div[1]/div[1]/mat-option[1]/span[1]"
-    textbox_TenureMargin_xpath = "//input[@id='mat-input-0']"
+    list_Operator_xpath = "//span[normalize-space()='>=']"
+    textbox_TenureMargin_id = "en-sec-subvention-details-value"
     dropdown_unit_xpath = "//body/div[2]/div[4]/div[1]/mat-dialog-container[1]/anchors-member[1]/section[" \
                           "1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[1]/div[1]/form[" \
                           "1]/jkf-element-builder[4]/jkf-group-element[1]/div[2]/jkf-element-builder[" \
@@ -94,25 +95,36 @@ class LoanProposal:
                               "1]/anchors-wrapper-element[1]/anchors-select-input[1]/div[1]/mat-form-field[1]/div[" \
                               "1]/div[1]/div[3] "
     list_operator_xpath = "//body/div[2]/div[6]/div[1]/div[1]/div[1]/mat-option[1]/span[1]"
-    textbox_PriceRs_xpath = "//input[@id='mat-input-1']"
+    textbox_PriceRs_xpath = "/html[1]/body[1]/div[2]/div[4]/div[1]/mat-dialog-container[1]/anchors-member[1]/section[" \
+                            "1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[1]/div[1]/form[" \
+                            "1]/jkf-element-builder[5]/jkf-group-element[1]/div[2]/jkf-element-builder[" \
+                            "1]/jkf-array-element[1]/div[2]/div[1]/div[1]/jkf-element-builder[" \
+                            "2]/anchors-wrapper-element[1]/anchors-number-input[1]/div[1]/mat-form-field[1]/div[" \
+                            "1]/div[1]/div[3]/input[1] "
     dropdown_MarginUnit_xpath = "//body/div[2]/div[4]/div[1]/mat-dialog-container[1]/anchors-member[1]/section[" \
                                 "1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[1]/div[1]/form[" \
                                 "1]/jkf-element-builder[6]/anchors-wrapper-element[1]/anchors-select-input[1]/div[" \
                                 "1]/mat-form-field[1]/div[1]/div[1]/div[3]/mat-select[1]/div[1]/div[1]/span[1] "
     list_MarginUnit_xpath = "//body/div[2]/div[6]/div[1]/div[1]/div[1]/mat-option[1]/span[1]"
-    textbox_Margin_xpath = "//input[@id='mat-input-2']"
+    textbox_Margin_id = "en-sec-subvention-details-comissionToJK"
     button_SubmitLoanAmountBased_xpath = "//body/div[2]/div[4]/div[1]/mat-dialog-container[1]/anchors-member[" \
                                          "1]/section[1]/anchors-member-section[1]/anchors-forms[" \
                                          "1]/anchors-form-builder[1]/div[1]/div[1]/button[1] "
     # Proposal Agreement List
     button_NewProposal_agreement_xpath = "//span[contains(text(),'New Proposal Agreement')]"
-    textbox_FLDGvalue_xpath = "//input[@id='mat-input-0']"
+    textbox_FLDGvalue_id = "en-sec-subvention-details-value"
     textbox_NoOFPDCsCollected_xpath = "//input[@id='mat-input-1']"
     textbox_BuyBackArrangements_xpath = "//input[@id='mat-input-2']"
     textbox_PlatformPeriod_xpath = "//input[@id='mat-input-3']"
     button_SubmitPAL_xpath = "//body/div[2]/div[4]/div[1]/mat-dialog-container[1]/anchors-member[1]/section[" \
                              "1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[1]/div[1]/div[" \
                              "1]/button[1] "
+    dropdown_LoanAmountOrigin_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[" \
+                                      "1]/section[1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[" \
+                                      "1]/div[1]/form[1]/jkf-element-builder[15]/anchors-wrapper-element[" \
+                                      "1]/anchors-select-input[1]/div[1]/mat-form-field[1]/div[1]/div[1]/div[3] "
+    list_LoanAmountOriginLS_xpath = "/html[1]/body[1]/div[2]/div[4]/div[1]/div[1]/div[1]/mat-option[1]/span[1]"
+    list_LoanAmountOriginP_xpath = "/html[1]/body[1]/div[2]/div[4]/div[1]/div[1]/div[1]/mat-option[2]/span[1]"
 
     # Proposal Documents
     doclink_JKDDQuestionnaire_xpath = "//body/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[1]/section[" \
@@ -192,6 +204,15 @@ class LoanProposal:
     def setGlobalMargin(self, GlobalMargin):
         self.driver.find_element_by_xpath(self.textbox_GlobalMargin_xpath).send_keys(GlobalMargin)
 
+    def clickLoanAmountOrigin(self):
+        self.driver.find_element_by_xpath(self.dropdown_LoanAmountOrigin_xpath).click()
+
+    def selectLoanAmountOriginLS(self):
+        self.driver.find_element_by_xpath(self.list_LoanAmountOriginLS_xpath).click()
+
+    def selectLoanAmountOriginP(self):
+        self.driver.find_element_by_xpath(self.list_LoanAmountOriginP_xpath).click()
+
     def setPurposeOfLoan(self, PurposeOfLoan):
         self.driver.find_element_by_xpath(self.textbox_PurposeOfLoan).send_keys(PurposeOfLoan)
 
@@ -223,7 +244,7 @@ class LoanProposal:
         self.driver.find_element_by_xpath(self.list_Operator_xpath).click()
 
     def setTenureMargin(self, TenureMargin):
-        self.driver.find_element_by_xpath(self.textbox_TenureMargin_xpath).send_keys(TenureMargin)
+        self.driver.find_element_by_id(self.textbox_TenureMargin_id).send_keys(TenureMargin)
 
     def clickunit(self):
         self.driver.find_element_by_xpath(self.dropdown_unit_xpath).click()
@@ -247,7 +268,7 @@ class LoanProposal:
         self.driver.find_element_by_xpath(self.list_MarginUnit_xpath).click()
 
     def setMargin(self, Margin):
-        self.driver.find_element_by_xpath(self.textbox_Margin_xpath).send_keys(Margin)
+        self.driver.find_element_by_id(self.textbox_Margin_id).send_keys(Margin)
 
     def clickSubmit(self):
         self.driver.find_element_by_xpath(self.button_SubmitLoanAmountBased_xpath).click()
@@ -256,7 +277,7 @@ class LoanProposal:
         self.driver.find_element_by_xpath(self.button_NewProposal_agreement_xpath).click()
 
     def setFLDGvalue(self, FLDGvalue):
-        self.driver.find_element_by_xpath(self.textbox_FLDGvalue_xpath).send_keys(FLDGvalue)
+        self.driver.find_element_by_id(self.textbox_FLDGvalue_id).send_keys(FLDGvalue)
 
     def setNoOFPDCsCollected(self, NoOFPDCsCollected):
         self.driver.find_element_by_xpath(self.textbox_NoOFPDCsCollected_xpath).send_keys(NoOFPDCsCollected)

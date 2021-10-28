@@ -1,7 +1,11 @@
 class Promoters:
     clickon_entitytoedit_xpath = "//tbody/tr[1]/td[1]"
-    tab_PromotersandGuarantors_xpath = "//div[@id='mat-tab-label-0-1']"
-    button_NewPromoter_xpath = "//span[contains(text(),'Add New Promoter')]"
+    tab_PromotersandGuarantors_xpath = "//div[contains(text(),'Promoters / Guarantors')]"
+    button_NewPromoter_xpath = "/html[1]/body[1]/anchors-root[1]/anchors-anchors-container[" \
+                               "1]/anchors-application-details[1]/div[1]/div[3]/div[1]/mat-tab-group[1]/div[" \
+                               "1]/mat-tab-body[2]/div[1]/div[1]/anchors-section-renderer[1]/div[" \
+                               "1]/anchors-content-decider[1]/anchors-member-details[1]/div[1]/anchors-table[1]/div[" \
+                               "1]/div[2]/div[3]/button[2]/span[1] "
     textbox_promotername_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[" \
                                  "1]/section[1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[" \
                                  "1]/div[2]/form[1]/jkf-element-builder[1]/anchors-wrapper-element[" \
@@ -31,29 +35,27 @@ class Promoters:
                               "1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[1]/div[2]/form[" \
                               "1]/jkf-element-builder[12]/anchors-wrapper-element[1]/anchors-select-input[1]/div[" \
                               "1]/mat-form-field[1]/div[1]/div[1]/div[3]/mat-select[1]/div[1]/div[1]/span[1] "
-    list_JKAccess_xpath = "//span[contains(text(),'Yes')]"
+    list_JKAccess_xpath = "/html[1]/body[1]/div[2]/div[4]/div[1]/div[1]/div[1]/mat-option[1]/span[1]"
     dropdown_ISPrimaryPromoter_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[" \
                                        "1]/section[1]/anchors-member-section[1]/anchors-forms[" \
                                        "1]/anchors-form-builder[1]/div[2]/form[1]/jkf-element-builder[" \
-                                       "12]/anchors-wrapper-element[1]/anchors-select-input[1]/div[1]/mat-form-field[" \
-                                       "1]/div[1]/div[1]/div[3] "
-    list_ISPrimaryPromoter_xpath = "/html[1]/body[1]/div[2]/div[4]/div[1]/div[1]/div[1]/mat-option[1]/span[1]"
+                                       "13]/anchors-wrapper-element[1]/anchors-select-input[1]/div[1]/mat-form-field[" \
+                                       "1]/div[1]/div[1]/div[3]/mat-select[1]/div[1]/div[1]/span[1] "
+    list_ISPrimaryPromoterYES_xpath = "/html[1]/body[1]/div[2]/div[4]/div[1]/div[1]/div[1]/mat-option[1]/span[1]"
+    text_ISPrimaryPromoter_xpath = "//span[contains(text(),'Only a Single Promoter can be marked as Primary.')]"
     list_ISPrimaryPromoterNO_xpath = "/html[1]/body[1]/div[2]/div[4]/div[1]/div[1]/div[1]/mat-option[2]/span[1]"
     dropdown_PromoterStatus_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[" \
                                     "1]/section[1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[" \
                                     "1]/div[2]/form[1]/jkf-element-builder[14]/anchors-wrapper-element[" \
                                     "1]/anchors-select-input[1]/div[1]/mat-form-field[1]/div[1]/div[1]/div[" \
                                     "3]/mat-select[1]/div[1]/div[1]/span[1] "
-    list_PromoterStatus_xpath = "//body/div[2]/div[4]/div[1]/div[1]/div[1]/mat-option[1]/span[1]"
+    list_PromoterStatusActive_xpath = "/html[1]/body[1]/div[2]/div[4]/div[1]/div[1]/div[1]/mat-option[1]/span[1]"
+    list_PromoterStatusInactive_xpath = "/html[1]/body[1]/div[2]/div[4]/div[1]/div[1]/div[1]/mat-option[" \
+                                        "2]/span[1] "
     button_SubmitPromoter_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[" \
                                   "1]/section[1]/anchors-member-section[1]/anchors-forms[1]/anchors-form-builder[" \
                                   "1]/div[2]/div[1]/button[1] "
-    linkPromoterEdit_xpath = "//body[1]/anchors-root[1]/anchors-anchors-container[1]/anchors-application-details[" \
-                             "1]/div[1]/div[3]/div[1]/mat-tab-group[1]/div[1]/mat-tab-body[2]/div[1]/div[" \
-                             "1]/anchors-section-renderer[1]/div[1]/anchors-content-decider[" \
-                             "1]/anchors-member-details[1]/div[1]/anchors-table[1]/div[1]/div[3]/anchors-table-card[" \
-                             "1]/mat-card[1]/mat-card-content[1]/div[1]/anchors-table-base[1]/div[1]/table[1]/tbody[" \
-                             "1]/tr[1]/td[1] "
+    linkPromoterEdit_xpath = "//div[contains(text(),'Test B')]"
 
     # Promoter AddressDetails
     button_EditAddress_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[" \
@@ -106,16 +108,18 @@ class Promoters:
     #                          "1]/div[2]/div[3]/button[2] "
 
     # Documents
-    upload_doc_photo_xpath = "Profile Photo"
-    upload_doc_aadharFront_xpath = "Aadhar Card Front"
-    upload_doc_aadharBack_xpath = "Aadhar Card Back"
-    upload_doc_adressProof_xpath = "Address Proof"
-    upload_doc_KYCDoc_xpath = "KYC Doc"
-    upload_doc_CACertifiedNetWorth_xpath = "CA Certified NetWorth"
+    upload_doc_photo_id = "Profile Photo"
+    upload_doc_aadharFront_id = "Aadhar Card Front"
+    upload_doc_aadharBack_id = "Aadhar Card Back"
+    upload_doc_adressProof_id = "Address Proof"
+    upload_doc_KYCDoc_id = "KYC Doc"
+    upload_doc_CACertifiedNetWorth_id = "CA Certified NetWorth"
     upload_save_xpath = "//span[contains(text(),'Save')]"
 
     # Bank Details
-    button_addBankAccount_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[1]/section[1]/anchors-member-section[5]/anchors-member-details[1]/div[1]/anchors-table[1]/div[1]/div[2]/div[3]/button[3]"
+    button_addBankAccount_xpath = "/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[1]/anchors-member[" \
+                                  "1]/section[1]/anchors-member-section[5]/anchors-member-details[1]/div[" \
+                                  "1]/anchors-table[1]/div[1]/div[2]/div[3]/button[2]/span[1] "
     textbox_AccNumber_xpath = "//input[@id='en-sec-promoters-acc-info-accNumber']"
     textbox_ConfirmAccNumber_xpath = "//input[@id='en-sec-promoters-acc-info-accNumberC']"
     textbox_AccholderName_xpath = "//input[@id='en-sec-promoters-acc-info-accountHolderName']"
@@ -203,17 +207,25 @@ class Promoters:
     def clickISPrimaryPromoter(self):
         self.driver.find_element_by_xpath(self.dropdown_ISPrimaryPromoter_xpath).click()
 
+    def selectISPrimaryPromoterYES(self):
+        self.driver.find_element_by_xpath(self.list_ISPrimaryPromoterYES_xpath).click()
+
     def selectISPrimaryPromoterNO(self):
         self.driver.find_element_by_xpath(self.list_ISPrimaryPromoterNO_xpath).click()
 
-    def selectISPrimaryPromoter(self):
-        self.driver.find_element_by_xpath(self.list_ISPrimaryPromoter_xpath).click()
+    def textISPrimaryPromoter(self):
+        TextPromoter = self.driver.find_element_by_xpath(self.text_ISPrimaryPromoter_xpath).click()
+        print(TextPromoter)
+        return TextPromoter
 
     def clickPromoterStatus(self):
         self.driver.find_element_by_xpath(self.dropdown_PromoterStatus_xpath).click()
 
-    def selectPromoterStatus(self):
-        self.driver.find_element_by_xpath(self.list_PromoterStatus_xpath).click()
+    def selectPromoterStatusActive(self):
+        self.driver.find_element_by_xpath(self.list_PromoterStatusActive_xpath).click()
+
+    def selectPromoterStatusInactive(self):
+        self.driver.find_element_by_xpath(self.list_PromoterStatusInactive_xpath).click()
 
     def ClickSubmitPromoterStatus(self):
         self.driver.find_element_by_xpath(self.button_SubmitPromoter_xpath).click()
@@ -264,22 +276,22 @@ class Promoters:
         self.driver.find_element_by_xpath(self.upload_save_xpath).click()
 
     def uploadphoto(self, photo):
-        self.driver.find_element_by_xpath(self.upload_doc_photo_xpath).send_keys(photo)
+        self.driver.find_element_by_id(self.upload_doc_photo_id).send_keys(photo)
 
     def uploadaadharfront(self, aadharfront):
-        self.driver.find_element_by_xpath(self.upload_doc_aadharFront_xpath).send_keys(aadharfront)
+        self.driver.find_element_by_id(self.upload_doc_aadharFront_id).send_keys(aadharfront)
 
     def uploadaadharback(self, aadharback):
-        self.driver.find_element_by_xpath(self.upload_doc_aadharBack_xpath).send_keys(aadharback)
+        self.driver.find_element_by_id(self.upload_doc_aadharBack_id).send_keys(aadharback)
 
     def uploadaddressproof(self, addressproof):
-        self.driver.find_element_by_xpath(self.upload_doc_adressProof_xpath).send_keys(addressproof)
+        self.driver.find_element_by_id(self.upload_doc_adressProof_id).send_keys(addressproof)
 
     def uploadKYCDoc(self, KYCDoc):
-        self.driver.find_element_by_xpath(self.upload_doc_KYCDoc_xpath).send_keys(KYCDoc)
+        self.driver.find_element_by_id(self.upload_doc_KYCDoc_id).send_keys(KYCDoc)
 
     def uploadCACertifiedNetWorth(self, CACertifiedNetWorth):
-        self.driver.find_element_by_xpath(self.upload_doc_CACertifiedNetWorth_xpath).send_keys(CACertifiedNetWorth)
+        self.driver.find_element_by_id(self.upload_doc_CACertifiedNetWorth_id).send_keys(CACertifiedNetWorth)
 
     def ClickAddBankDetails(self):
         self.driver.find_element_by_xpath(self.button_addBankAccount_xpath).click()
@@ -288,7 +300,7 @@ class Promoters:
         self.driver.find_element_by_xpath(self.textbox_AccNumber_xpath).send_keys(AccNumber)
 
     def setConfirmAccNumber(self, ConfirmAccNumber):
-        self.driver.find_element_by_xpath(self.textbox_ConfirmAccNumber_xpath).semd_keys(ConfirmAccNumber)
+        self.driver.find_element_by_xpath(self.textbox_ConfirmAccNumber_xpath).send_keys(ConfirmAccNumber)
 
     def setAccHolderName(self, AccHolderName):
         self.driver.find_element_by_xpath(self.textbox_AccholderName_xpath).send_keys(AccHolderName)
@@ -305,7 +317,7 @@ class Promoters:
     def selectAccTypeSaving(self):
         self.driver.find_element_by_xpath(self.list_AccountTypeSaving_xpath).click()
 
-    def SetMobileNumber(self,MobileNumber):
+    def SetMobileNumber(self, MobileNumber):
         self.driver.find_element_by_xpath(self.textbox_Mobilenumber_xpath).send_keys(MobileNumber)
 
     def clickISPrimayAcc(self):
